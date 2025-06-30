@@ -1,0 +1,18 @@
+spring:
+  application:
+    name:
+      Firebase External Auth System
+  datasource:
+    url: jdbc:mysql://${DB_HOST}:3306/${DB_NAME}
+    username: ${DB_USER}
+    password: ${DB_PASSWORD}
+  jpa:
+    hibernate:
+      ddl-auto: none
+    show-sql: true
+  flyway:
+    enabled: true
+    locations: classpath:db/migration
+server:
+  port: 5000
+google-cred: ${GOOGLE_CRED}
